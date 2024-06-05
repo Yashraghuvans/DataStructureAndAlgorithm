@@ -6,7 +6,7 @@ class Solution{
     int linear_search(vector<int>arr,int value){
         for(int i=0;i<arr.size();i++){
             if(arr[i] == value){
-                cout<<"element found at index "<<i<<endl;
+                cout<<"element found at index -> "<<i<<endl;
                 return 0;
             }
         }
