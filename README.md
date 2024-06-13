@@ -1,11 +1,11 @@
 C++ Data Structures and Algorithms Practice Questions
 
-<- Description ->
+Description 
 
 This repository serves as a practice ground for honing your Data Structures and Algorithms (DSA) skills in C++. It offers a collection of well-structured, commented practice problems across various DSA topics. Feel free to explore, solve, and contribute your own questions to enhance your understanding and problem-solving abilities!
 
 
-<- Contribution Guidelines ->
+Contribution Guidelines 
 
 Feel free to contribute your own practice questions! 
 
