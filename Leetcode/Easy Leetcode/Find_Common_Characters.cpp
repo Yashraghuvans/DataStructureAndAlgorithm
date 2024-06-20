@@ -40,7 +40,7 @@ public:
 };
 
 int main() {
-    vector<string> words
+    vector<string> words;
     words.push_back("apple");
     words.push_back("ape");
     words.push_back("april");
