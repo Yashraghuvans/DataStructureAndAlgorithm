@@ -26,6 +26,7 @@ class Solution {
         return to_string(c) + "/" + to_string(d);
     } else {
         return "equal";
+    }
        
     }
 };
