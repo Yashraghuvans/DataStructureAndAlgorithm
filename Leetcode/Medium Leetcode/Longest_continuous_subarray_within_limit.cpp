@@ -11,7 +11,7 @@ class Solution{
       s.insert(nums[j]);
       int diff=*s.rbegin() - *s.begin();
       while(i<j && diff>limit){
-        auto it = s.find(nums[j]);
+        auto it = s.find(nums[i]);
         s.erase(it);
         i++;
       }
@@ -20,7 +20,26 @@ class Solution{
     }
     return maxlen;
   }
-  
+   int longestSubarray2(vector<int>& nums, int limit) {
+        priority_queue<pair<int,int>>maxHeap;
+        int n=nums.size();
+        int j=0,i=0,maxlen=0;
+        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>minHeap;
+        while(j<n){
+            maxHeap.push({nums[j],j});
+            minHeap.push({nums[j],j});
+            int diff=maxHeap.top().first-minHeap.top().first;
+            while(i<j && diff>limit){
+                i=min(maxHeap.top().second,minHeap.top().second)+1;
+                while(maxHeap.top().second<i)maxHeap.pop();
+                while(minHeap.top().second<i)minHeap.pop();
+                diff=maxHeap.top().first-minHeap.top().first;
+            }
+            maxlen=max(maxlen,j-i+1);
+            j++;
+        }
+        return maxlen;
+   }
 };
 
 int main(){
@@ -34,6 +53,9 @@ int main(){
   Solution s;
 
   int ans1=s.longestSubarray1(nums,limit);
+  cout<<ans1<<endl;
+  
+  int ans2=s.longestSubarray2(nums,limit);
   cout<<ans1<<endl;
   return 0;
 }
