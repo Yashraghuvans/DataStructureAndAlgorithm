@@ -37,3 +37,17 @@ public:
 
     }
 };
+
+
+int main(){
+    Solution s;
+    int n,m;
+    vector<int>position;
+    cin>>n>>m;
+    for(int i=0;i<n;i++){
+        cin>>position[i];
+    }
+    int ans=s.maxDistance(position,m);
+    cout<<ans<<endl;
+    return 0;
+}
