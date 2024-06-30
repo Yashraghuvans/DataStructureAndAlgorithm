@@ -13,3 +13,11 @@ public:
         return r;  
     }
 }; 
+int main(){
+    int n;
+    cin>>n;
+    Solution s;
+    int ans=s.revers(n);
+    cout<<ans<<endl;
+    return 0;
+}
