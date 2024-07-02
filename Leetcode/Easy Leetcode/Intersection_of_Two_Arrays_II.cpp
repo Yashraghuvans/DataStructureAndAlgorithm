@@ -26,3 +26,11 @@ public:
         return result;
     }
 };
+
+int main(){
+    vector<int>nums1={1,2,2,1};
+    vector<int>={2,2};
+    Solution s;
+    s.intersect(nums1,nums2);
+    return 0;
+}
