@@ -19,6 +19,17 @@ class Solution{
         }
 
     }
+   void ans2(vector<int>& nums) {
+       //optimal approch
+        int j=0;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]!=0){
+                swap(nums[i],nums[j]);
+                j++;
+            }
+        }
+
+    }
 };
 int main(){
   int n;
@@ -32,8 +43,5 @@ int main(){
   s.ans1(nums);
   //optimised approch
   s.ans2(nums);
-  //optimal approch
-  s.ans3(nums);
-  
   return 0;
 }
