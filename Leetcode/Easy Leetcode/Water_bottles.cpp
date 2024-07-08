@@ -16,4 +16,9 @@ public:
 };
 int main(){
   Solution s;
+    int numBottles,numExchange;
+    cin>>numBottles;
+    cin>>numExchange;
+    int ans=s.numWaterBottles(numBottles,numExchange);
+    cout<<ans<<endl;
 }
