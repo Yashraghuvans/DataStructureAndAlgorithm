@@ -26,3 +26,10 @@ public:
         return ans;
     }
 };
+int main(){
+    Solution s;
+    string s;
+    sput(s);
+    s.romanToInt(s);
+    return 0;
+}
