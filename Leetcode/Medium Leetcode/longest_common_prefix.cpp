@@ -20,5 +20,6 @@ public:
 };
 int main(){
   Solution s;
+    vector<string>v;
   return 0;
 }
