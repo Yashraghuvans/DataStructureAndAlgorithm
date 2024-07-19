@@ -19,4 +19,17 @@ public:
         
     }
 };
+int main(){
+    int n,m,arr1[n],arr2[m];
+
+    for(int i=0;i<n;i++){
+        cin>>arr1[i];
+    }
+    for(int i=0;i<m;i++){
+        cin>>arr2[i];
+    }
+    Solution s;
+    s.findUnion(arr1[],arr2[],n,m);
+    return 0;
+}
 
