@@ -35,6 +35,29 @@ int main(){
     }
     cout <<endl;
 
+    //running code
+    cout<<"Select the option : \n\t\t0 : Rock\n\t\t1 : Paper\n\t\t2 : Sizer"<<endl;    
+    cout<<"\t\t=";
+    cin>>match;
+    cout<<"\n";
+    
+    
+    //analysis of input
+    value=g.random_generator(ans);
+    ans=g.random_generator(ans);
+    if(g.check(value,match)){
+        for(int i=0;i<80;++i){
+        cout<<"*";
+    }cout<<endl;
+        cout<<"\n\t\tYou won good work !\n"<<endl;
+    }
+    else{
+        for(int i=0;i<80;++i){
+        cout<<"*";
+    }cout<<endl;
+        cout<<"\n\t\tYou loss try again !\n"<<endl;
+    }
+
    
    return 0;
 }
