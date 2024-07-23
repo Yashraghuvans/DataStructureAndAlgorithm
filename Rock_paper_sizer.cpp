@@ -57,8 +57,9 @@ int main(){
     }cout<<endl;
         cout<<"\n\t\tYou loss try again !\n"<<endl;
     }
-
-    //replay
+   
+   
+   //replay
     for(int i=0;i<80;++i){
         cout<<"*";
     }cout<<endl;
@@ -74,5 +75,7 @@ int main(){
         return 0;
     }
    
-   return 0;
+    
+    
+    return 0;
 }
