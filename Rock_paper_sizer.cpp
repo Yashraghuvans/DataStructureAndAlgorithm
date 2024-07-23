@@ -58,6 +58,21 @@ int main(){
         cout<<"\n\t\tYou loss try again !\n"<<endl;
     }
 
+    //replay
+    for(int i=0;i<80;++i){
+        cout<<"*";
+    }cout<<endl;
+    
+    cout<<"\n\t\twant to play again (0 or 1)\n\t\t=";
+    cin>>cnt;
+    if(cnt==1){
+        cout << "\033[H\033[J" <<flush;
+        goto X;
+        
+    }
+    else{
+        return 0;
+    }
    
    return 0;
 }
