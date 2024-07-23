@@ -7,13 +7,20 @@ public:
         return rand() % 3;
     }
 
-    int check(int value, int match) {
-        if (value == (match + 1) % 3) { 
-            return 1;
-        } else if (value == match) {
-            return 3; // Tie
-        } else {
+   int check(int value,int match){
+        int a=value;
+        int b=match;//user
+        if((a==1 && b==0)){
+          return 0;
+        }
+        else if((a==1 && b==2)){
             return 2;
+        }
+        else if((a==0 && b==2)){
+            return 0;   
+        }
+        else{ 
+            return 3; 
         }
     }
 
