@@ -7,15 +7,49 @@ class game{
          ans = rand() % 3;
         return ans;
     }
-    bool check(int value,int match){
-        if(value==match){
-            return true;
+    int check(int value,int match){
+        int a=value;
+        int b=match;
+        if((a==0 && b==1)){
+          return 1;
+          break;
         }
-        else{
-            return false;
+        else if((a==1 && b==2)){
+            return 2;
+            break;
+        }
+        else if((a==2 && b==0)){
+            return 0;
+            break;
+        }
+        else{ 
+            return 3; 
+            break;
         }
     }
+    
+    string chos(int ans){
+        string taken;   
+        switch(ans){
+            case 0:
+            taken="Rock";
+            break;
+            
+            case 1:
+            taken="Paper";
+            break;
+            
+            case 2:
+            taken="Sizer";
+            break;
+        }
+        return taken;
+    }
 };
+
+
+
+
 
 int main(){
     int value, match,ans,cnt=1;
@@ -42,20 +76,36 @@ int main(){
     cout<<"\n";
     
     
-    //analysis of input
+    //call by value
     value=g.random_generator(ans);
     ans=g.random_generator(ans);
-    if(g.check(value,match)){
+    int retrn=g.check(value,match);
+    
+    
+    
+    //computer choise
+    string taken=g.chos(ans);
+    
+    
+
+    //analysis of input
+    if(retrn != 3){
         for(int i=0;i<80;++i){
-        cout<<"*";
-    }cout<<endl;
-        cout<<"\n\t\tYou won good work !\n"<<endl;
+            cout<<"*";
+        }
+        cout<<endl;
+        cout<<"\n\t\tYou won good work !"<<endl;
+        cout<<"\t\tComputer has choosed "<<taken<<endl;
+        cout<<"\n";
     }
     else{
         for(int i=0;i<80;++i){
-        cout<<"*";
-    }cout<<endl;
-        cout<<"\n\t\tYou loss try again !\n"<<endl;
+            cout<<"*";
+        }
+        cout<<endl;
+        cout<<"\n\t\tYou loss try again !"<<endl;
+        cout<<"\t\tComputer has choosed "<<taken<<endl;
+        cout<<"\n";
     }
    
    
