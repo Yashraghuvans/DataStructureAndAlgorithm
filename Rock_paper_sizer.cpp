@@ -11,7 +11,7 @@ public:
         int a=value;
         int b=match;//user
         if((a==1 && b==0)){
-          return 0;
+          return 1;
         }
         else if((a==1 && b==2)){
             return 2;
@@ -25,6 +25,7 @@ public:
     }
 
     string chos(int ans) { 
+        
         switch (ans) {
             case 0:
                 return "Rock";
@@ -33,7 +34,7 @@ public:
             case 2:
                 return "Scissors";
         }
-        return "";
+        return ;
     }
 };
 
