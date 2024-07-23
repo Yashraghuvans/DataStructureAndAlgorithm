@@ -2,54 +2,33 @@
 using namespace std;
 
 class game{
-    public:
-    int random_generator(int ans){
-         ans = rand() % 3;
-        return ans;
+public:
+    int random_generator() { 
+        return rand() % 3;
     }
-    int check(int value,int match){
-        int a=value;
-        int b=match;
-        if((a==0 && b==1)){
-          return 1;
-          break;
-        }
-        else if((a==1 && b==2)){
+
+    int check(int value, int match) {
+        if (value == (match + 1) % 3) { 
+            return 1;
+        } else if (value == match) {
+            return 3; // Tie
+        } else {
             return 2;
-            break;
-        }
-        else if((a==2 && b==0)){
-            return 0;
-            break;
-        }
-        else{ 
-            return 3; 
-            break;
         }
     }
-    
-    string chos(int ans){
-        string taken;   
-        switch(ans){
+
+    string chos(int ans) { 
+        switch (ans) {
             case 0:
-            taken="Rock";
-            break;
-            
+                return "Rock";
             case 1:
-            taken="Paper";
-            break;
-            
+                return "Paper";
             case 2:
-            taken="Sizer";
-            break;
+                return "Scissors";
         }
-        return taken;
+        return "";
     }
 };
-
-
-
-
 
 int main(){
     int value, match,ans,cnt=1;
@@ -77,8 +56,8 @@ int main(){
     
     
     //call by value
-    value=g.random_generator(ans);
-    ans=g.random_generator(ans);
+    value=g.random_generator();
+    ans=g.random_generator();
     int retrn=g.check(value,match);
     
     
@@ -124,8 +103,5 @@ int main(){
     else{
         return 0;
     }
-   
-    
-    
     return 0;
 }
