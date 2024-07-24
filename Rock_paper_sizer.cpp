@@ -9,7 +9,7 @@ public:
 
    int check(int value,int match){
         int a=value;
-        int b=match;//user
+        int b=match;
         if((a==1 && b==0)){
           return 1;
         }
