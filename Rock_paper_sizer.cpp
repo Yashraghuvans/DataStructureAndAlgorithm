@@ -28,11 +28,11 @@ public:
         
         switch (ans) {
             case 0:
-                return "Rock";
+                return "Rock 🌑";
             case 1:
-                return "Paper";
+                return "Paper 📜";
             case 2:
-                return "Scissors";
+                return "Scissors ✂️";
         }
         return ;
     }
@@ -57,7 +57,7 @@ int main(){
     cout <<endl;
 
     //running code
-    cout<<"Select the option : \n\t\t0 : Rock\n\t\t1 : Paper\n\t\t2 : Sizer"<<endl;    
+    cout<<"Select the option : \n\t\t0 : Rock 🌑\n\t\t1 : Paper 📜\n\t\t2 : Sizer ✂️"<<endl;    
     cout<<"\t\t=";
     cin>>match;
     cout<<"\n";
