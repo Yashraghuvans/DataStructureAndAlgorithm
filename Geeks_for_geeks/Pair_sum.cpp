@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Solution{
+class solution{
   vector<vector<int>>pairSum(vector<int>&arr,int s){
     vector<vector<int>>ans;
     for(int i=0;i<arr.size();i++){
@@ -30,7 +30,8 @@ int main(){
   for(int i=0;i<size;i++){
     cin>>arr[i];
   }
-  Solution s;
+  
+  solution s;
   vector<vector<int>>pair;
   pair.push_back(s.pairSum(arr,sum));
   return 0;
