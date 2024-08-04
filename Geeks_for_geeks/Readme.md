@@ -1,23 +1,12 @@
-<img src="https://www.countercraftsec.com/resources/2023/02/cc-new-tecnology.gif" alt="Image Description" width="1000" height="400">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240124135755/Output.gif" alt="Image Description" width="400" height="300">
 
-# C++ Projects
+# Geeks For Geeks
 
-This repository contains a collection of my C++ projects.
+This folder consist of questions of gfg related to C++ data structure and algorithm
 
-## Project List
 
-### Project 1: Rock-Paper-Scissors Game
+## Division of questions:
 
-This C++ project implements a simple Rock-Paper-Scissors game with a time limit.
-
-**Features:**
-
-* Generates random computer choices.
-* Implements basic game logic with win/loss/tie conditions.
-* Includes a time limit for player input.
-* Tracks player and computer scores.
-
-**How to Run:**
-
-1. Compile the code using a C++ compiler.
-2. Run the generated executable
+1. Easy
+2. Medium
+3. Hard
