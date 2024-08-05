@@ -1,7 +1,0 @@
-<-----> Leet Code Daily Practice Problem <----->
-
-This folder consist of leetcode daily practice problems in 3 categories:
-
-                                                      1 : Easy Leetcode
-                                                      2 : Medium Leetcode
-                                                      3 : Hard Leetcode
