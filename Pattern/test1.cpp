@@ -50,6 +50,16 @@ class Solution{
             }
             cout << endl;
         }
+        for(int i=1; i<=n; i++){
+            for (int j = i; j < n; j++)
+            {
+                cout<<"* ";
+            }
+            for(int j = 2*i-1; j >0; j--){
+                cout<<" ";
+            }
+            cout<<endl;
+        }
         
     }
 };
@@ -66,5 +76,7 @@ int main(){
     s.pattern2(n);
     //pattern 3
     s.pattern3(n);
+     //pattern 4
+    s.pattern4(n);
     return 0;
 }
