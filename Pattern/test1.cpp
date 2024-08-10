@@ -62,6 +62,16 @@ class Solution{
         }
         
     }
+    int pattern5(int n){
+        for(int i=1; i<n; i++){
+            for (int j = i; j < n; j++)
+            {
+                cout<<" * ";
+            }
+            cout<<endl;
+        }
+            
+    }
 };
 
 
@@ -78,5 +88,7 @@ int main(){
     s.pattern3(n);
      //pattern 4
     s.pattern4(n);
+     //pattern 5
+    s.pattern5(n);
     return 0;
 }
