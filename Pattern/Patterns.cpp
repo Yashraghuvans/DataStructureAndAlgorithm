@@ -14,13 +14,13 @@ class Solution{
             
     }
     void pattern2(int n){
-        for(int i=1; i<=n; i++){
+        for(int i=1; i<n; i++){
             for (int j = 1; j < i; j++)
             {
                 cout<<"  ";
             }
             for(int j = i; j < n; j++){
-                cout<<" * ";
+                cout<<"*";
             }
             cout<<endl;
         }
@@ -72,16 +72,40 @@ class Solution{
         }
             
     }
+      void pattern6(int n){
+         for(int i=1; i<n; i++){
+            for (int j = n; j > i; j--)
+            {
+                cout<<"  ";
+            }
+            for(int j = 0; j <2*i-1; j++){
+                cout<<"* ";
+            }
+            cout<<endl;
+        }
+        for(int i=n; i>0; i--){
+            for (int j = n; j > i; j--)
+            {
+                cout<<"  ";
+            }
+            for(int j = 0; j <2*i-1; j++){
+                cout<<"* ";
+            }
+            cout<<endl;
+        }
+      
+    }
 };
 
 
 int main(){
     int n;
+    cout<<"enter number of stars :"<<endl;
     cin>>n;
      Solution s;
 
     int choise;
-    cout<<"enter any number between 1 to 5 :"<<endl;
+    cout<<"enter any number between 1 to 6 :"<<endl;
     cin>>choise;
 
     switch(choise){
@@ -99,6 +123,9 @@ int main(){
             break;
         case 5:
             s.pattern5(n); //pattern 5
+            break;
+        case 6:
+            s.pattern6(n); //pattern 5
             break;
         default:
             cout<<"wrong !"<<endl;
