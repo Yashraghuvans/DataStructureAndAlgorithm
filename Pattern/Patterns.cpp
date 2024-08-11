@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution{
     public:
-    int pattern1(int n){
+    void pattern1(int n){
         for(int i=1; i<n; i++){
             for (int j = 1; j <= i; j++)
             {
@@ -13,7 +13,7 @@ class Solution{
         }
             
     }
-    int pattern2(int n){
+    void pattern2(int n){
         for(int i=1; i<=n; i++){
             for (int j = 1; j < i; j++)
             {
@@ -25,7 +25,7 @@ class Solution{
             cout<<endl;
         }
     }
-    int pattern3(int n){
+    void pattern3(int n){
         for(int i=1; i<=n; i++){
             for (int j = n; j > i; j--)
             {
@@ -37,7 +37,7 @@ class Solution{
             cout<<endl;
         }
     }
-    int pattern4(int n){
+    void pattern4(int n){
         for (int i = n; i > 0; i--) {
             for (int j = 1; j <= n; j++) 
             {
@@ -62,7 +62,7 @@ class Solution{
         }
         
     }
-    int pattern5(int n){
+    void pattern5(int n){
         for(int i=1; i<n; i++){
             for (int j = i; j < n; j++)
             {
