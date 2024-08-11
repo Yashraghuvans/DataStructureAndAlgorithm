@@ -78,17 +78,33 @@ class Solution{
 int main(){
     int n;
     cin>>n;
+     Solution s;
 
-    Solution s;
-    //pattern 1
-    s.pattern1(n);
-    //pattern 2
-    s.pattern2(n);
-    //pattern 3
-    s.pattern3(n);
-     //pattern 4
-    s.pattern4(n);
-     //pattern 5
-    s.pattern5(n);
+    int choise;
+    cout<<"enter any number between 1 to 5 :"<<endl;
+    cin>>choise;
+
+    switch(choise){
+        case 1:
+            s.pattern1(n); //pattern 1
+            break;
+        case 2:
+            s.pattern2(n); //pattern 2
+            break;
+        case 3:
+            s.pattern3(n); //pattern 3
+            break;
+        case 4:
+            s.pattern4(n); //pattern 4
+            break;
+        case 5:
+            s.pattern5(n); //pattern 5
+            break;
+        default:
+            cout<<"wrong !"<<endl;
+            break;
+    }
+
+    
     return 0;
 }
