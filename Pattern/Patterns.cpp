@@ -72,7 +72,7 @@ class Solution{
         }
             
     }
-      void pattern6(int n){
+    void pattern6(int n){
          for(int i=1; i<n; i++){
             for (int j = n; j > i; j--)
             {
