@@ -95,6 +95,16 @@ class Solution{
         }
       
     }
+  void pattern7(int n){
+      for(int i = n ; i>0 ; i--){
+        for (int j = i ; j <n ; j++)
+        {
+            cout<<" * ";
+        }
+        cout<<endl;
+      }
+            
+    }
 };
 
 
@@ -105,7 +115,7 @@ int main(){
      Solution s;
 
     int choise;
-    cout<<"enter any number between 1 to 6 :"<<endl;
+    cout<<"enter any number between 1 to 7 :"<<endl;
     cin>>choise;
 
     switch(choise){
@@ -126,6 +136,9 @@ int main(){
             break;
         case 6:
             s.pattern6(n); //pattern 5
+            break;
+        case 7:
+            s.pattern7(n); //pattern 5
             break;
         default:
             cout<<"wrong !"<<endl;
