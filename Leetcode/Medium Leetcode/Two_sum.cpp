@@ -35,3 +35,19 @@ public:
 };
 
 
+
+int main() {
+    Solution s;
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
+
+    vector<int> indices1 = s.twoSum1(nums, target);
+    vector<int> indices2 = s.twoSum2(nums, target);
+
+    cout << "Indices: [" << indices1[0] << ", " << indices1[1] << "]" << endl;
+    cout << "Indices: [" << indices2[0] << ", " << indices2[1] << "]" << endl;
+
+    return 0;
+}
+
+
