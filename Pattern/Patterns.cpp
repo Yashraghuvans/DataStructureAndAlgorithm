@@ -103,7 +103,20 @@ class Solution{
         }
         cout<<endl;
       }
-            
+    }
+    void pattern8(int n){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                cout<<"* ";
+            }
+            cout<<endl;
+        }
+        for(int i=0;i<=n;i++){
+            for(int j=0;j<=n-i;j++){
+                cout<<"* ";
+            }
+            cout<<endl;
+        }
     }
 };
 
@@ -135,10 +148,13 @@ int main(){
             s.pattern5(n); //pattern 5
             break;
         case 6:
-            s.pattern6(n); //pattern 5
+            s.pattern6(n); //pattern 6
             break;
         case 7:
-            s.pattern7(n); //pattern 5
+            s.pattern7(n); //pattern 7
+            break;
+        case 8:
+            s.pattern8(n); //pattern 8
             break;
         default:
             cout<<"wrong !"<<endl;
