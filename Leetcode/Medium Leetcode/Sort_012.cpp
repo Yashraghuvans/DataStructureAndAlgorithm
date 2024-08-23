@@ -37,6 +37,28 @@ public:
         }
     }
 
+//dutch algo flag algorithm
+void sort2(vector<int>&arr){
+    int n=arr.size();
+    int mid=arr[0];
+    int low=arr[0];
+    int high=arr[n-1];
+    while(mid<=high){
+        if(arr[mid]==0){
+            swap(arr[low],arr[mid]);
+            low++;
+            mid++;
+        }
+        else if(arr[mid]==1){
+            mid++;
+        }
+        else if(arr[mid]==2){
+            swap(arr[mid],arr[high]);
+            high--;
+        }
+    }
+}
+
 
 };
 
