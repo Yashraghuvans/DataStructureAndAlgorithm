@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution{
 public :
-    int ans(vector<int>&arr){
+int ans(vector<int>&arr){
         int cnt;
         int fin;
         int n=arr.size();
@@ -18,6 +18,19 @@ public :
         }
        return fin; 
     }
+int ans2(vector<int>&arr){
+    map<int,int>mpp;
+    int n=arr.size();
+    for(int i=0;i<n;i++){
+        mpp[arr[i]]++;
+    }
+    for(auto it : mpp){
+        if(it.second>n/2){
+            return it.first;
+        }
+    }
+    return -1;
+}
 };
 
 
