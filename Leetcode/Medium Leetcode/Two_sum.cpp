@@ -32,6 +32,25 @@ public:
         }
         return ans;
     }
+    vector<pair<int,int>> twoSum(vector<int>& arr, int target, int n)
+{
+    map<int,int>mpp;
+    sort(arr.begin(),arr.end());
+    vector<pair<int,int>>ans;
+
+    for(int i=0;i<n;i++){
+        mpp[arr[i]]++;
+    }
+    for(int i=0;i<n;i++){
+        int a=arr[i];
+        int need=target-a;
+        if(mpp.find(need)!=mpp.end() && mpp[need] > 0){
+            ans.push_back({a,need});
+            mpp[need]--;
+        }
+    }
+    return ans;
+}
 };
 
 
