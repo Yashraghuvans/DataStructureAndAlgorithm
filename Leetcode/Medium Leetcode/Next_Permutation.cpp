@@ -3,11 +3,12 @@ using namespace std;
 
 class Solution {
 public:
+    //stl lib
     void nextPermutation(vector<int>& nums) {
         next_permutation(nums.begin(),nums.end());
     }
-
-    void nextPermutation(vector<int>&nums){
+    //optimized 
+    void nextPermutation1(vector<int>&nums){
         int index=-1;
         int n=nums.size();
 
@@ -41,5 +42,6 @@ public:
 };
 
 int main(){
+  Solution s;
   return 0;
 }
