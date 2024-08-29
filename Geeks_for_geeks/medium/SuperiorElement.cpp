@@ -27,6 +27,21 @@ vector<int> superiorElements(vector<int>&a) {
     sort(ans.begin(), ans.end());
     return ans;
 }
+//optimized
+vector<int> superiorElements(vector<int>&a) {
+    int maxi=0;
+    int n=a.size();
+    vector<int>ans;
+    for(int i=n-1;i>=0;i--){
+        if(a[i]>maxi){
+            ans.push_back(a[i]);
+        }
+        maxi=max(maxi,a[i]);
+    }
+    set<int> lead(ans.begin(),ans.end());
+    vector<int>answer(lead.begin(),lead.end());
+    return answer;
+}
 };
 
 int main(){
