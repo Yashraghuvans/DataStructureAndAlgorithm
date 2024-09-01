@@ -25,6 +25,23 @@ public:
         
         return element;
     }
+    int majorityElement1(vector<int>& nums) {
+        map<int,int>mpp;
+        int maxi=0;
+        int n=nums.size();
+
+        for(int i=0;i<n;i++){
+            mpp[nums[i]]++;
+        }
+
+        for (auto it : mpp){
+            if(it.second>n/2){
+                maxi=it.first;
+                break;                
+            }
+        }
+        return maxi;
+    }
 };
 
 int main(){
@@ -38,6 +55,7 @@ int main(){
   Solution s;
 
   s.majorityElement(&nums);
+  s.majorityElement1(&nums);
   
   for(int i=0;i<n;i++){
     cout<<nums[i];
