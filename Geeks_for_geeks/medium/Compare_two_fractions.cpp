@@ -15,8 +15,6 @@ class Solution {
     
   
     ss >> c >> slash >> d;
-    
-   
     int left = a * d;
     int right = b * c;
     
