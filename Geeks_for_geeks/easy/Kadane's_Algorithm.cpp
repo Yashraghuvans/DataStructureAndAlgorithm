@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using nanmespace std:
+using nanmespace std;
 class Solution {
   public:
     
