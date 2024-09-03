@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using nanmespace std:
 class Solution {
   public:
     
@@ -16,3 +18,7 @@ class Solution {
         return maxi;
     }
 };
+int main(){
+  Solution s;
+  return 0;
+}
