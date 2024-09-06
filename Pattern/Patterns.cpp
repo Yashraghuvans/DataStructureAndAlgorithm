@@ -129,7 +129,7 @@ class Solution{
         cout<<endl;
         }
     }
-   void pattern9(int n){
+   void pattern10(int n){
      for(int i=n;i>0;i--){
         for(int j=2*i-1;j>0;j--){
             cout<<"*";
@@ -183,6 +183,9 @@ int main(){
             break;
         case :9
             s.pattern9(n); //pattern 9
+            break;
+        case :10
+            s.pattern10(n); //pattern 10
             break;
         default:
             cout<<"wrong !"<<endl;
