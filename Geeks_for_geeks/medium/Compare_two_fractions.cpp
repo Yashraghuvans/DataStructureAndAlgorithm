@@ -5,18 +5,14 @@ class Solution {
   public:
     string compareFrac(string str) {
       int a, b, c, d;
-    
-    
-    stringstream ss(str);
-    
-   
-    char slash, comma;
-    ss >> a >> slash >> b >> comma;
+      stringstream ss(str);
+      char slash, comma;
+      ss >> a >> slash >> b >> comma;
     
   
-    ss >> c >> slash >> d;
-    int left = a * d;
-    int right = b * c;
+      ss >> c >> slash >> d;
+      int left = a * d;
+      int right = b * c;
     
     if (left > right) {
         return to_string(a) + "/" + to_string(b);
