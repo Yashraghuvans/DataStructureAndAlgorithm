@@ -1,8 +1,11 @@
 #include <bits/stdc++.h>
+#include <vector>
+#include<iostream>
 using namespace std;
+
 class Solution {
 public:
-vector<vector<int>> threeSum(vector<int>& nums) {
+    vector<vector<int>> threeSum(vector<int>& nums) {
         int n = nums.size();
         sort(nums.begin(), nums.end());
         vector<vector<int>> ans;
@@ -13,10 +16,7 @@ vector<vector<int>> threeSum(vector<int>& nums) {
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
                 if (sum == 0) {
-
                     uniqueTriplets.insert({nums[i], nums[left], nums[right]});
-
-
                     left++;
                     right--;
                 } else if (sum < 0) {
@@ -34,7 +34,20 @@ vector<vector<int>> threeSum(vector<int>& nums) {
     }
 };
 
-int main(){
+int main() {
     Solution s;
-  return 0;
+    vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    vector<vector<int>> result = s.threeSum(nums);
+
+    cout << "Triplets that sum to zero are:" << endl;
+    for (const auto& triplet : result) {
+        cout << "[";
+    for (int i = 0; i < triplet.size(); i++) {
+        cout << triplet[i];
+        if (i < triplet.size() - 1) cout << ", ";
+    }
+    cout << "]" << endl;
+}
+
+    return 0;
 }
