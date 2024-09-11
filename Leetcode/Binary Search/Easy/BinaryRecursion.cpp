@@ -7,6 +7,9 @@ class solution{
     
     public:
     int binaryRecursive(vector<int>& arr,int low,int high,int target){
+        if(low>high){
+            return -1;
+        }
         int mid=(low+high)/2;
         if(arr[mid]==target){
             return mid;
