@@ -13,7 +13,7 @@ class Solution {
         {
             int middle = low + (high - low) / 2;
             int element = v[middle];
-            if (element <= x)
+            if (element < x)
             {
                 floorIndex = middle;
                 low = middle + 1;
