@@ -5,8 +5,7 @@ using namespace std;
 class Solution {
 public:
     int sumByD(vector<int>& arr, int div) {
-        int n = arr.size(); // size of array
-        // Find the summation of division values:
+        int n = arr.size(); 
         int sum = 0;
         for (int i = 0; i < n; i++) {
             sum += ceil((double)(arr[i]) / (double)(div));
@@ -19,7 +18,7 @@ public:
             return -1;
         int low = 1, high = *max_element(arr.begin(), arr.end());
 
-        // Apply binary search:
+        
         while (low <= high) {
             int mid = (low + high) / 2;
             if (sumByD(arr, mid) <= limit) {
@@ -33,6 +32,5 @@ public:
 };
 int main(){
     Solution s;
-    
     return 0;
 }
