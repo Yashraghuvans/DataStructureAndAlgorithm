@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/**/
+/*bitset is used to convert the number into its binary form and store it into a vector data*/
 class solution{
     public:
     int bitFinder(int n){
