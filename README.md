@@ -29,4 +29,6 @@ Feel free to contribute your own practice questions!
 <h4>Geeks For Geeks</h4>
 <p align="left"> <a href="https://www.geeksforgeeks.org/user/yashraguzgo/" target="_blank" rel="noreferrer"> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240124135755/Output.gif" alt="leetcode" width="40" height="40"/> </a>
 
-[![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Yashraghuvans&theme=github-compact)]
+[![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Yashraghuvans&theme=github-compact)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+
