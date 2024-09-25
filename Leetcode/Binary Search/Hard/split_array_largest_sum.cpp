@@ -37,3 +37,13 @@ public:
         return low;
     }
 };
+
+int main()
+{
+    Solution s;
+    vector<int> a = {10, 20, 30, 40};
+    int k = 2;
+    int ans =s.splitArray(a, k);
+    cout << "The answer is: " << ans << "\n";
+    return 0;
+}
