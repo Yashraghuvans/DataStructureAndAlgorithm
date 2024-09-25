@@ -1,6 +1,6 @@
  ![MasterHead](https://media.licdn.com/dms/image/C4E12AQGhFbRMPvf0tg/article-cover_image-shrink_600_2000/0/1636293868291?e=2147483647&v=beta&t=Cmx0QZ0okPduLbfWorB2IIaBXhGelna6dtW0z9E8L34)
 <h1 align="center">C++ Data Structures and Algorithms </h1>
-<h4 align="center">This repository serves as a practice ground for honing your Data Structures and Algorithms (DSA) skills in C++. It offers a collection of well-structured, commented practice problems across various DSA topics. Feel free to explore, solve, and contribute your own questions to enhance your understanding and problem-solving abilities!</h4>
+<h4 align="center">This repository serves as a practice ground for honing your Data Structures and Algorithms (DSA) skills in C++. It offers a collection of well-structured, commented practice problems across various DSA topics. Feel free to explore, solve, and contribute your own questions to enhance your understanding and problem-solving abilities!</h4> 
 
 
 
