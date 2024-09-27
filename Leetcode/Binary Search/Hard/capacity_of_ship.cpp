@@ -16,25 +16,7 @@ int days(vector<int>arr,int cap){
     return days;
 }
 
-int leastWeightCapacity(vector<int> &weights, int d)
-{
-   int low,high,mid;
-   low=*max_element(weights.begin(),weights.end());
-   high=accumulate(weights.begin(),weights.end(),0);
 
-    while(low<=high){
-        mid=(low+high)/2;
-        int day=days(weights,mid);
-        if(day<=d){
-            high=mid-1;
-        }
-        else{
-            low=mid+1;
-        }
-    }
-    return low;
-   
-}
 };
 int main(){
   solution s;
