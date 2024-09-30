@@ -1,4 +1,4 @@
-#inlcude <bits.stdc++.h>
+#include <bits/stdc++.h>
 #include <fstream>
 
 int main() {
