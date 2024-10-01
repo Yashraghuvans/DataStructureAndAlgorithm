@@ -2,7 +2,7 @@
 using namespace std;
 class Solution {
 public:
-    string longestCommonPrefix(vector<string>& strs) {
+    string longestCommonPrefix(vector<string>&v) {
         string ans = "";
         sort(v.begin(), v.end());
         int n = v.size();
