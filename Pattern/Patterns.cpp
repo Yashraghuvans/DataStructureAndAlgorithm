@@ -181,10 +181,10 @@ int main(){
         case 8:
             s.pattern8(n); //pattern 8
             break;
-        case :9
+        case 9:
             s.pattern9(n); //pattern 9
             break;
-        case :10
+        case 10:
             s.pattern10(n); //pattern 10
             break;
         default:
