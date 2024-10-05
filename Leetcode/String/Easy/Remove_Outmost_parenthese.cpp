@@ -25,5 +25,9 @@ public:
     }
 };
 int main(){
-  return 0;
+    Solution s;
+    cout<<s.removeOuterParentheses("(()())(())")<<endl; 
+    cout<<s.removeOuterParentheses("(()())(())(()(()))")<<endl; 
+    cout<<s.removeOuterParentheses("()())(())(()(()))(()(()(()))")<<endl;
+    return 0;
 }
