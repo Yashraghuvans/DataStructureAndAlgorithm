@@ -28,6 +28,33 @@ class Solution{
         }
         return head;
     }
+
+    //removing Kth element
+    Node *remove(Node *head,int k){
+        if(head==NULL){
+            if(head->next==NULL)return NULL;
+        }
+        if(k==1){
+            Node *temp=head;
+            head=head->next;
+            delete temp;
+            return head;
+        }
+        Node *temp=head;
+        Node *prev=NULL;
+        int cnt=0;
+        while(temp!=NULL){
+            cnt++;
+            if(cnt==k){
+                prev->next=prev->next->next;
+                delete temp;
+                return prev;
+            }
+            prev=temp;
+            temp=temp->next;
+        }
+        return head;
+    }
 };
 
 
