@@ -62,3 +62,12 @@ void print(Node *head)
         temp = temp->next;
     }
 }
+
+int main(){
+    vector<int> arr = {1, 2, 3, 4, 5};
+    Node *head = convert(arr);
+    print(head);
+    head = deleteHead(head);
+    print(head);
+    return 0;
+}
