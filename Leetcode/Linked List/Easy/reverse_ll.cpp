@@ -32,6 +32,17 @@ public:
         }
         return head;
     }
+       ListNode* reverseListNew(ListNode* head) {
+        ListNode* temp = head;
+        ListNode* prev = NULL;
+        while (temp != NULL) {
+            ListNode* front = temp->next;
+            temp->next = prev;
+            prev = temp;
+            temp = front;
+        }
+        return prev;
+    }
 };
 
 int main(){
