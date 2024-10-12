@@ -51,3 +51,12 @@ public:
     }
 };
 
+int main(){
+    Solution s;
+    ListNode* head = new ListNode(1);
+    head->next = new ListNode(2);
+    head->next->next->next->next = head->next;
+    cout << s.hasCycle(head) << endl; 
+    cout << s.hasCycle1(head) << endl; 
+    return 0;
+}
