@@ -32,7 +32,6 @@ int main(){
   }
   
   solution s;
-  vector<vector<int>>pair;
-  pair.push_back(s.pairSum(arr,sum));
+  
   return 0;
 }
