@@ -32,3 +32,8 @@ public:
         return dummy->next;        
     }
 };
+
+int main(){
+ Solution s;
+ return 0;
+}
