@@ -10,6 +10,16 @@ struct ListNode {
  
 class Solution {
 public:
+     ListNode *creating(vector<int>arr){
+        ListNode *head=new Node(arr[0]);
+        ListNode *mover=head;
+        for(int i=1;i<arr.size();i++){
+            ListNode *temp=new ListNode(arr[i]);
+            mover=temp->next;
+            mover=temp;
+        }
+        return head;
+    }
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode* temp=head;
         ListNode* mover=head;
@@ -31,3 +41,7 @@ public:
 
     }
 };
+int main(){
+     Solution s;
+     return head;
+}
