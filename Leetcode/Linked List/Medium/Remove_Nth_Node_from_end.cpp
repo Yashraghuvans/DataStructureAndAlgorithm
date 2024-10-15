@@ -40,8 +40,20 @@ public:
     return head;
 
     }
+     void print(ListNode* head){
+          ListNode* temp=head;
+          while(temp!=NULL){
+               cout<<temp->data<<" ";
+          }
+          cout<<endl;
+     }
 };
 int main(){
      Solution s;
+     vector<int>arr={1,2,3,4,4,5,6,7,8,9,10};
+     int n=5;
+     s.creating(arr);
+     s.removeNthFromEnd(head,n);
+     s.print(head);
      return head;
 }
