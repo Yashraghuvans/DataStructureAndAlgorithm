@@ -28,3 +28,9 @@ public:
         return s == t;
     }
 };
+
+int main(){
+    Solution s;
+    
+    return 0;
+}
