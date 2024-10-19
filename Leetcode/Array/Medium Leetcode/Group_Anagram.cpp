@@ -21,7 +21,17 @@ public:
     }
 };
 
-int main(){
-  Solution s;
-  return 0;
+int main() {
+    vector<string> strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+    Solution obj;
+    vector<vector<string>> result = obj.groupAnagrams(strs);
+
+    for (auto group : result) {
+        for (auto word : group) {
+            cout << word << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
 }
