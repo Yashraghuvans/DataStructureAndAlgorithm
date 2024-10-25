@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
@@ -16,3 +19,9 @@ public:
         return slow;
     }
 };
+
+int main(){
+    Solution s;
+
+    return 0;
+}
