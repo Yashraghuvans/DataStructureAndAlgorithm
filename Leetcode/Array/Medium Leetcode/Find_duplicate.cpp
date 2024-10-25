@@ -20,8 +20,13 @@ public:
     }
 };
 
-int main(){
-    Solution s;
+int main() {
+    vector<int> nums = {1, 3, 4, 2, 2};
+
+    Solution solution;
+    int duplicate = solution.findDuplicate(nums);
+
+    cout <<duplicate <<endl;
 
     return 0;
 }
