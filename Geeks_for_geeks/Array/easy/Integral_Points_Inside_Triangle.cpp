@@ -15,3 +15,14 @@ class Solution {
         return abs(area)/2 - pb/2 +1;
     }
 };
+
+int main(){
+    int t;
+    cin>>t;
+    long long int p[2],q[2],r[2];
+    cin>>p[0]>>p[1]>>q[0]>>q[1]>>r[0]>>r[1];
+    Solution s;
+    lond lond ans=s.InternalCount(p,q,r);
+    cout<<ans<<endl;
+    return 0;
+}
