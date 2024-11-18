@@ -9,5 +9,8 @@ class Solution {
 };
 
 int main(){
+  int n,k;
+  cin>>n>>k;
+  checkKthBit(n,k);
   return 0;
 }
