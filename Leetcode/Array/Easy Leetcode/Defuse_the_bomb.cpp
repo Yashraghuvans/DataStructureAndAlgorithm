@@ -20,3 +20,21 @@ public:
         return res;
     }
 };
+int main(){
+    vector<int>code;
+    int k,n;
+    cin>>n>>k;
+    
+    for(int i=0;i<n;i++){
+        cin>>code[i];
+    }
+    
+    Solution s;
+    s.decrpyt(code,k);
+    
+    for(int i=0;i<n;i++){
+        cout<<code[i];
+    }
+    return 0;
+    
+}
