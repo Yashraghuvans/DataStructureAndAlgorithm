@@ -32,7 +32,7 @@ int main(){
     }
     
     Solution s;
-    s.decrpyt(code,k);
+    s.decrypt(code,k);
     
     for(int i=0;i<n;i++){
         cout<<code[i];
