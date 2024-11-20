@@ -29,6 +29,24 @@ public:
     }
 };
 
-int main(){
+int main() {
+    Solution solution;
+    string s;
+    int k;
+
+    cout << "Enter the string: ";
+    cin >> s;
+
+    cout << "Enter the value of k: ";
+    cin >> k;
+
+    int result = solution.takeCharacters(s, k);
+
+    if (result == -1) {
+        cout << "It is not possible to remove characters to satisfy the condition." << endl;
+    } else {
+        cout << "Minimum characters to remove: " << result << endl;
+    }
+
     return 0;
 }
