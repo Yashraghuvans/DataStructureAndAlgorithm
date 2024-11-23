@@ -28,3 +28,15 @@ public:
         return{};
     }
 };
+
+int main() {
+    vector<int> numbers = {2, 7, 11, 15};
+    int target = 9;
+
+    Solution solution;
+    vector<int> indices = solution.twoSum(numbers, target);
+
+    cout << "Indices: 1  " << indices[0] << ", " << indices[1] << endl;
+
+    return 0;
+}
