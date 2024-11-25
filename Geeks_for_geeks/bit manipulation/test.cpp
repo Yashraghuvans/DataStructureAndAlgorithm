@@ -14,3 +14,12 @@ class Solution{
         return ans;
     }
 };
+
+int main(){
+    int n;
+    cin>>n;
+    Solution s;
+    int ans=s.countSetBits(n);
+    cout<<ans<<endl;
+    return 0;
+}
