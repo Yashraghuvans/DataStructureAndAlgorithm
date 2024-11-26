@@ -1,8 +1,11 @@
+#include <bits>/stdc++.h>
+using namespace std;
+
 class Solution {
   public:
     int setBit(int n) {
         int i=0;
-        while(i<10)
+        while(i<32)
         {
             if(n == (n&(~(1<<i))))
             {
@@ -15,3 +18,10 @@ class Solution {
         return n;
     }
 };
+
+int main() {
+    Solution s;
+    int n = 10;
+    cout << "Set bit of " << n << " is: " << s.setBit(n) << endl;
+    return 0;
+}
