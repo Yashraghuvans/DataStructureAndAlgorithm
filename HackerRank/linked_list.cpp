@@ -24,6 +24,18 @@ node* convert(vector<int>arr){
     }
     return head;
 }
+node* print(node* head){
+    node*temp=head;
+    cout<<"----------------------------------"<<endl;
+    cout<<"Linked List = ";
+    while(temp){
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+    cout<<"----------------------------------"<<endl;
+    return head;
+}
 
 int main(){
     vector<int>arr={1,2,3,4,5,6,7,8};
