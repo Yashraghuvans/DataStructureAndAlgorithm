@@ -50,6 +50,27 @@ void connection_ll(node* head1,node* head2){
     }
     point1=curr;
 }
+bool interconnection(node* head1, node* head2) {
+    if (!head1 || !head2) {
+        return false; 
+    }
+
+    node* slow1 = head1;
+    node* fast1 = head1;
+    node* slow2 = head2;
+
+    while (fast1 && fast1->next) {
+        slow1 = slow1->next;
+        fast1 = fast1->next->next;
+        slow2 = slow2->next;
+
+        if (slow1 == slow2) {
+            return true;
+        }
+    }
+
+    return false;
+}
 int main(){
     vector<int>arr1={1,2,3,4,5,6};
     vector<int>arr2={11,22,33,44};
