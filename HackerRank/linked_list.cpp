@@ -36,6 +36,25 @@ node* print(node* head){
     cout<<"----------------------------------"<<endl;
     return head;
 }
+node* insert_in_end(node*head,int value){
+    node*mover=head;
+    while(mover->next!=nullptr){
+        mover=mover->next;
+    }
+    node*curr=new node(value);
+    mover->next=curr;
+    return head;
+}
+void mid_finder(node*head){
+    node*temp=head;
+    node*fast=temp;
+    node*slow=temp;
+    while(fast->next!=nullptr){
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    cout<<"mid = "<< (slow->data);
+}
 
 int main(){
     vector<int>arr={1,2,3,4,5,6,7,8};
