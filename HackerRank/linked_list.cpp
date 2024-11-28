@@ -55,6 +55,41 @@ void mid_finder(node*head){
     }
     cout<<"mid = "<< (slow->data);
 }
+void createLoop(node* head, int position) {
+    node* current = head;
+    node* loopNode = nullptr;
+
+    for (int i = 0; i < position; i++) {
+        current = current->next;
+    }
+
+    loopNode = current;
+
+    while (current->next != nullptr) {
+        current = current->next;
+    }
+
+    current->next = loopNode;
+}
+
+void detectLoop(node* head) {
+    node *slow = head, *fast = head;
+    cout<<endl;
+     while (fast != NULL && fast->next != NULL) {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast) {
+            node *loopNode = slow;
+            slow = head;
+            while (slow != loopNode) {
+                slow = slow->next;
+                loopNode = loopNode->next;
+            }
+            cout << "\nLoop node data: " <<loopNode->data << endl;
+        }
+    }
+}
 
 int main(){
     vector<int>arr={1,2,3,4,5,6,7,8};
