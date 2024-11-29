@@ -90,7 +90,19 @@ void detectLoop(node* head) {
         }
     }
 }
-
+void delete_k(node*head,int x){
+    node* temp=head;
+    node* curr=head;
+    for(int i=1;i<=x-1;i++){
+        curr=curr->next;
+    }
+    for(int i=1;i<=x;i++){
+        temp=temp->next;
+    }
+    curr->next=temp->next;
+    free(temp);
+    
+}
 int main(){
     vector<int>arr={1,2,3,4,5,6,7,8};
     int value=9;
