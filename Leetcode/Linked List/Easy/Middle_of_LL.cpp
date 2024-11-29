@@ -1,5 +1,5 @@
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 struct ListNode
@@ -14,44 +14,49 @@ struct ListNode
 class Solution
 {
 public:
-    int length(ListNode* head) {
+    int length(ListNode *head)
+    {
         int len = 0;
-        while (head != NULL) {
+        while (head != NULL)
+        {
             len++;
             head = head->next;
         }
         return len;
     }
-    ListNode* middleNode(ListNode* head) {
+    ListNode *middleNode(ListNode *head)
+    {
         int len = length(head);
         int ans = (len / 2);
         int cnt = 0;
-        ListNode* temp = head;
+        ListNode *temp = head;
 
-        while (cnt < ans) {
+        while (cnt < ans)
+        {
             temp = temp->next;
             cnt++;
         }
         return temp;
     }
-    ListNode *middleNode_Optimized(ListNode *head)
+
+    ListNode *middleNode(ListNode *head)
     {
-        ListNode *slowPointer = head;
-        ListNode *fastPointer = head;
+        ListNode *slow = head;
+        ListNode *fast = head;
 
-        while (fastPointer != nullptr && fastPointer->next != nullptr)
+        while (fast != nullptr && fast->next != nullptr)
         {
-            slowPointer = slowPointer->next;
-            fastPointer = fastPointer->next->next;
+            slow = slow->next;
+            fast = fast->next->next;
         }
-
-        return slowPointer;
+        return slow;
     }
 };
 
-int main(){
+int main()
+{
     Solution obj;
-    ListNode* head = new ListNode(1);
+    ListNode *head = new ListNode(1);
     head->next = new ListNode(2);
     head->next->next = new ListNode(3);
     head->next->next->next = new ListNode(4);
