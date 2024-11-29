@@ -36,6 +36,7 @@ node* print(node* head){
     cout<<"----------------------------------"<<endl;
     return head;
 }
+
 void connection_ll(node* head1,node* head2){
     int value=6;
     node* point1=head1;
