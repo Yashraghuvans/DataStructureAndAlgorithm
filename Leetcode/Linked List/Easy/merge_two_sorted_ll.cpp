@@ -30,4 +30,12 @@ ListNode* constructor(vector<int>arr){
 }
 
 
-
+int main(){
+    vector<int>num1={1,2,3};
+    vector<int>num2={1,3,4};
+    ListNode* head1= constructor(num1);
+    ListNode* head2= constructor(num2);
+    
+   
+    return 0;
+}
