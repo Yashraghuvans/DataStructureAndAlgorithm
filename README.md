@@ -21,13 +21,13 @@ Feel free to contribute your own practice questions!
 
 <h3>Sources Of Question</h3>
 <h4>Leet Code</h4>
-<p align="left"> <a href="https://leetcode.com/problemset" target="_blank" rel="noreferrer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbSilcW4EH9RpmwzYJdNcNkBxGoGbe1oT_YQ&s" alt="leetcode" width="40" height="40"/> </a>
+<p align="left"> <a href="https://leetcode.com/yashraghuvans" target="_blank" rel="noreferrer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbSilcW4EH9RpmwzYJdNcNkBxGoGbe1oT_YQ&s" alt="leetcode" width="40" height="40"/> </a>
 
 <h4>Hacker Rank</h4>
-<p align="left"> <a href="https://www.hackerrank.com" target="_blank" rel="noreferrer"> <img src="https://cdn.iconscout.com/icon/free/png-256/free-hackerrank-3628823-3030100.png" alt="leetcode" width="40" height="40"/> </a>
+<p align="left"> <a href="https://www.hackerrank.com/yashraghuvans" target="_blank" rel="noreferrer"> <img src="https://cdn.iconscout.com/icon/free/png-256/free-hackerrank-3628823-3030100.png" alt="leetcode" width="40" height="40"/> </a>
 
 <h4>Geeks For Geeks</h4>
-<p align="left"> <a href="https://www.geeksforgeeks.org/user/yashraguzgo/" target="_blank" rel="noreferrer"> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240124135755/Output.gif" alt="leetcode" width="40" height="40"/> </a>
+<p align="left"> <a href="https://www.geeksforgeeks.org/user/yashraguzgo" target="_blank" rel="noreferrer"> <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240124135755/Output.gif" alt="leetcode" width="40" height="40"/> </a>
 
 [![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Yashraghuvans&theme=github-compact)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
