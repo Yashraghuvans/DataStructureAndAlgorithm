@@ -31,4 +31,15 @@ public:
         }
         return false;
     }
+      bool checkIfExist2(vector<int>& arr) {
+        set<int> value;
+        for (int num : arr) {
+            if (value.count(num * 2) || num % 2 == 0 && value.count(num / 2)) {
+
+                return true;
+            }
+            value.insert(num);
+        }
+        return false;
+    }
 };
