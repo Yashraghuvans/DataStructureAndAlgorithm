@@ -1,118 +1,167 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-struct node{
-  public:
-  int data;
-  node* next;
-  node(int data1,node*next1){
-      data=data1;
-      next=next1;
-  }
-  node(int data1){
-      data=data1;
-      next=nullptr;
-  }
+struct node
+{
+public:
+    int data;
+    node *next;
+    node(int data1, node *next1)
+    {
+        data = data1;
+        next = next1;
+    }
+    node(int data1)
+    {
+        data = data1;
+        next = nullptr;
+    }
 };
-node* convert(vector<int>arr){
-    node*head=new node(arr[0]);
-    node*mover=head;
-    for(int i=1;i<arr.size();i++){
-        node*temp=new node(arr[i]);
-        mover->next=temp;
-        mover=temp;
+node *convert(vector<int> arr)
+{
+    node *head = new node(arr[0]);
+    node *mover = head;
+    for (int i = 1; i < arr.size(); i++)
+    {
+        node *temp = new node(arr[i]);
+        mover->next = temp;
+        mover = temp;
     }
     return head;
 }
-node* print(node* head){
-    node*temp=head;
-    cout<<"----------------------------------"<<endl;
-    cout<<"Linked List = ";
-    while(temp){
-        cout<<temp->data<<" ";
-        temp=temp->next;
+node *print(node *head)
+{
+    node *temp = head;
+    cout << "----------------------------------" << endl;
+    cout << "Linked List = ";
+    while (temp)
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
     }
-    cout<<endl;
-    cout<<"----------------------------------"<<endl;
+    cout << endl;
+    cout << "----------------------------------" << endl;
     return head;
 }
-node* insert_in_end(node*head,int value){
-    node*mover=head;
-    while(mover->next!=nullptr){
-        mover=mover->next;
+node *insert_in_end(node *head, int value)
+{
+    node *mover = head;
+    while (mover->next != nullptr)
+    {
+        mover = mover->next;
     }
-    node*curr=new node(value);
-    mover->next=curr;
+    node *curr = new node(value);
+    mover->next = curr;
     return head;
 }
-void mid_finder(node*head){
-    node*temp=head;
-    node*fast=temp;
-    node*slow=temp;
-    while(fast->next!=nullptr){
-        slow=slow->next;
-        fast=fast->next->next;
+void mid_finder(node *head)
+{
+    node *temp = head;
+    node *fast = temp;
+    node *slow = temp;
+    while (fast->next != nullptr)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
     }
-    cout<<"mid = "<< (slow->data);
+    cout << "mid = " << (slow->data);
 }
-void createLoop(node* head, int position) {
-    node* current = head;
-    node* loopNode = nullptr;
+void createLoop(node *head, int position)
+{
+    node *current = head;
+    node *loopNode = nullptr;
 
-    for (int i = 0; i < position; i++) {
+    for (int i = 0; i < position; i++)
+    {
         current = current->next;
     }
 
     loopNode = current;
 
-    while (current->next != nullptr) {
+    while (current->next != nullptr)
+    {
         current = current->next;
     }
 
     current->next = loopNode;
 }
 
-void detectLoop(node* head) {
+void detectLoop(node *head)
+{
     node *slow = head, *fast = head;
-    cout<<endl;
-     while (fast != NULL && fast->next != NULL) {
+    cout << endl;
+    while (fast != NULL && fast->next != NULL)
+    {
         slow = slow->next;
         fast = fast->next->next;
 
-        if (slow == fast) {
+        if (slow == fast)
+        {
             node *loopNode = slow;
             slow = head;
-            while (slow != loopNode) {
+            while (slow != loopNode)
+            {
                 slow = slow->next;
                 loopNode = loopNode->next;
             }
-            cout << "\nLoop node data: " <<loopNode->data << endl;
+            cout << "\nLoop node data: " << loopNode->data << endl;
         }
     }
 }
-void delete_k(node*head,int x){
-    node* temp=head;
-    node* curr=head;
-    for(int i=1;i<=x-1;i++){
-        curr=curr->next;
+void delete_k(node *head, int x)
+{
+    node *temp = head;
+    node *curr = head;
+    for (int i = 1; i <= x - 1; i++)
+    {
+        curr = curr->next;
     }
-    for(int i=1;i<=x;i++){
-        temp=temp->next;
+    for (int i = 1; i <= x; i++)
+    {
+        temp = temp->next;
     }
-    curr->next=temp->next;
+    curr->next = temp->next;
     free(temp);
-    
 }
-int main(){
-    vector<int>arr={1,2,3,4,5,6,7,8};
-    int value=9;
-    node*head=convert(arr);
+
+node *deleteDuplicates(node *head)
+{
+    if (!head)
+    {
+        return head;
+    }
+    node *ptr1 = head;
+    node *ptr2 = head->next;
+
+    while (ptr2 != nullptr && ptr2->next != null)
+    {
+        if (ptr1 != ptr2)
+        {
+            ptr1 = ptr1->next;
+            ptr2 = ptr2->next;
+        }
+        else if (ptr1->data == ptr2->data)
+        {
+            node *del = ptr1;
+            ptr1->next = ptr2->next;
+            ptr2->next = ptr2->next->next;
+            delete (del);
+        }
+    }
+    return head;
+}
+
+int main()
+{
+    vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8};
+    int value = 9;
+    node *head = convert(arr);
     print(head);
-    insert_in_end(head,value);
+    insert_in_end(head, value);
     print(head);
     mid_finder(head);
-    createLoop(head,4);
+    createLoop(head, 4);
     detectLoop(head);
-    
+
     return 0;
 }
