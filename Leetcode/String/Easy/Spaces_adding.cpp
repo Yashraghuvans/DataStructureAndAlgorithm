@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     string addSpaces(string s, vector<int>& spaces) {
@@ -19,3 +21,6 @@ public:
         return result;
     }
 };
+int main(){
+    return 0;
+}
