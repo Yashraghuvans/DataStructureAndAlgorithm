@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     bool canChange(string start, string target) {
@@ -38,3 +41,6 @@ public:
         return waitL == 0 && waitR == 0;
     }
 };
+int main(){
+    return 0;
+}
