@@ -28,4 +28,18 @@ public:
         return 0;
 
     }
+    
+    int maxCount(vector<int>& banned, int n, int maxSum) {
+        unordered_set<int> bannedSet(banned.begin(), banned.end());
+        int count = 0, sum = 0;
+
+        for (int num = 1; num <= n; ++num) {
+            if (bannedSet.count(num) == 0 && sum + num <= maxSum) {
+                count++;
+                sum += num;
+            }
+        }
+
+        return count;
+    }
 };
