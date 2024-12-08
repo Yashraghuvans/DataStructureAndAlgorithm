@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     using info=tuple<int, bool, int>;
@@ -19,9 +21,6 @@ public:
     }
 };
 
-auto init = []() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    return 'c';
-}();
+int main(){
+    return 0;
+}
