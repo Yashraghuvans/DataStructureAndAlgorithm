@@ -30,3 +30,26 @@ node *convert(vector<int> arr)
     return head;
 }
 
+void revers(int data) {
+    
+    stack<std::array<int, 1>> myStack;
+
+    for (int i = 0; i < 5; ++i) {
+        array<int, 1> tempArray = {arr[i]};
+        myStack.push(tempArray);
+    }
+
+    while (!myStack.empty()) {
+        array<int, 1> topArray = myStack.top();
+        cout << topArray[0] << " ";
+        myStack.pop();
+    }
+}
+int main(){
+    vector<int> arr = {1, 2, 3, 4, 5};
+    node *head = convert(arr);
+    while(head!=nullptr){
+        head = revers(head->data); 
+    }
+    return 0;
+}
