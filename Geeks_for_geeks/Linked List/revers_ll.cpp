@@ -1,55 +1,58 @@
-#include<bitset>/stdc++.h>
+#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-struct node{
-    public:
+    struct Node
+{
     int data;
-    node* next;
+    Node *next;
 
-    public:
-    node(int data1,node *next1){
-        data=data1;
-        next=next1;
-    }
-    node(int data1){
-        data=data1;
-        next=nullptr;
+    Node(int data1, Node *next1 = nullptr)
+    {
+        data = data1;
+        next = next1;
     }
 };
 
-node *convert(vector<int> arr)
+Node *reverseList(Node *head)
 {
-    node *head = new node(arr[0]);
-    node *prev = head;
-    for (int i = 1; i < arr.size(); i++)
+    stack<Node *> s;
+
+    Node *current = head;
+    while (current != nullptr)
     {
-        node *temp = new node(arr[i]);
-        prev->next = temp;
-        prev = temp;
+        s.push(current);
+        current = current->next;
     }
+
+    current = s.top();
+    head = current;
+    s.pop();
+
+    while (!s.empty())
+    {
+        current->next = s.top();
+        s.pop();
+        current = current->next;
+    }
+
+    current->next = nullptr;
+
     return head;
 }
 
-void revers(int data) {
-    
-    stack<std::array<int, 1>> myStack;
+int main()
+{
+    Node *head = new Node(1, new Node(2, new Node(3, new Node(4, new Node(5)))));
 
-    for (int i = 0; i < 5; ++i) {
-        array<int, 1> tempArray = {arr[i]};
-        myStack.push(tempArray);
-    }
+    head = reverseList(head);
 
-    while (!myStack.empty()) {
-        array<int, 1> topArray = myStack.top();
-        cout << topArray[0] << " ";
-        myStack.pop();
+    while (head != nullptr)
+    {
+        cout << head->data << " ";
+        head = head->next;
     }
-}
-int main(){
-    vector<int> arr = {1, 2, 3, 4, 5};
-    node *head = convert(arr);
-    while(head!=nullptr){
-        head = revers(head->data); 
-    }
+    cout <<endl;
+
     return 0;
 }
