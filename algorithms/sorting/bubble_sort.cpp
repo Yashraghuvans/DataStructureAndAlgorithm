@@ -1,48 +1,50 @@
-#include <bits/stdc++.h>
+#include <iostream>
+
 using namespace std;
 
-class solution
-{
-    public:
-    int bubble_sort(vector<int> data, int n)
-    {
-        for (int i = n - 1; i >= 0; i++)
-        {
-            for (int j = 0; j <= i; j++)
-            {
-                if (data[j] > data[j + 1])
-                {
-                    int temp = data[j + 1];
-                    data[j + 1] = data[j];
-                    data[j] = temp;
+class Solution {
+public:
+    void bubbleSort(int arr, int n) {
+        bool swapped;
+
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
                 }
             }
+
+            
+            if (!swapped) {
+                break;
+            }
         }
-        cout << "After Using bubble sort: " << "\n";
-        for (int i = 0; i < n; i++)
-        {
-            cout << data[i] << " ";
+    }
+
+    void printArray(int arr, int size) {
+        for (int i = 0; i < size; i++) {
+            cout << arr[i] << " ";
         }
-        cout << "\n";
+        cout << endl;
     }
 };
 
-int main()
-{
-    int n;
-    cout << "Enter the size of the array\n=" << endl;
-    cin >> n;
+int main() {
+    int arr = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
-    vector<int> data(n);
-    solution s;
-    cout << "Enter the Array\n"
-         << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> data[i];
-    }
+    cout << "Unsorted array: \n";
+    Solution().printArray(arr, n);
 
-    s.bubble_sort(data, n);
+    Solution().bubbleSort(arr, n);
+
+    cout << "Sorted array: \n";
+    Solution().printArray(arr, n);
 
     return 0;
 }
