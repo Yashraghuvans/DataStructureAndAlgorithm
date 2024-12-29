@@ -4,16 +4,18 @@ using namespace std;
 
 class Solution{
 public:
-  void ReversByWhile(string &str){
-    int start=0;
-    int end=str.length()-1;
-    while(start<=end){
-        swap(str[start],str[end]);
-        start++;
-        end--;
-    }
-  }
-  void ReversByFor(string &str){
+void reverseString(vector<char>& s) {
+        int start=0;
+        int n=s.size();
+        int end=n-1;
+        while(start<end){
+            swap(s[start],s[end]);
+            start++;
+            end--;
+        }
+        
+}
+void ReversByFor(string &str){
     for(int i=0 , j=str.length()-1 ; i<j ; i++ , j--){
         swap(str[i],str[j]);
     }
