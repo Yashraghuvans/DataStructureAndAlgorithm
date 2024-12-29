@@ -16,9 +16,9 @@ void reverseString(vector<char>& s) {
         
 }
 void ReversByFor(string &str){
-    for(int i=0 , j=str.length()-1 ; i<j ; i++ , j--){
-        swap(str[i],str[j]);
-    }
+    for(int i=0,j=s.size()-1;i<j;i++,j--){
+            swap(s[i],s[j]);
+        }
   }
 };
 int main()
