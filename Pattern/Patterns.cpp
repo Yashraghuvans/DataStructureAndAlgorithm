@@ -211,7 +211,7 @@ int main()
     Solution s;
 
     int choise;
-    cout << "enter any number between 1 to 7 :" << endl;
+    cout << "enter any number between 1 to 11 :" << endl;
     cin >> choise;
 
     switch (choise)
