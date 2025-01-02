@@ -20,3 +20,8 @@ public:
         return res;
     }
 };
+
+int main(){
+    Solution s;
+    return 0;
+}
