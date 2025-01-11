@@ -10,11 +10,68 @@ vector<string> split(const string &);
 
 void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
     
-    
     int orange = 0, apple = 0;
     for(int app: apples) if(app + a >= s && app + a <=t) apple++;
     for(int orr: oranges) if(orr + b >= s && orr + b <=t) orange++;
-    cout << apple << endl << orange;
-    
-    
+    cout << apple << endl << orange;   
 }
+int main()
+{
+    string first_multiple_input_temp;
+    getline(cin, first_multiple_input_temp);
+
+    vector<string> first_multiple_input = split(rtrim(first_multiple_input_temp));
+
+    int s = stoi(first_multiple_input[0]);
+
+    int t = stoi(first_multiple_input[1]);
+
+    string second_multiple_input_temp;
+    getline(cin, second_multiple_input_temp);
+
+    vector<string> second_multiple_input = split(rtrim(second_multiple_input_temp));
+
+    int a = stoi(second_multiple_input[0]);
+
+    int b = stoi(second_multiple_input[1]);
+
+    string third_multiple_input_temp;
+    getline(cin, third_multiple_input_temp);
+
+    vector<string> third_multiple_input = split(rtrim(third_multiple_input_temp));
+
+    int m = stoi(third_multiple_input[0]);
+
+    int n = stoi(third_multiple_input[1]);
+
+    string apples_temp_temp;
+    getline(cin, apples_temp_temp);
+
+    vector<string> apples_temp = split(rtrim(apples_temp_temp));
+
+    vector<int> apples(m);
+
+    for (int i = 0; i < m; i++) {
+        int apples_item = stoi(apples_temp[i]);
+
+        apples[i] = apples_item;
+    }
+
+    string oranges_temp_temp;
+    getline(cin, oranges_temp_temp);
+
+    vector<string> oranges_temp = split(rtrim(oranges_temp_temp));
+
+    vector<int> oranges(n);
+
+    for (int i = 0; i < n; i++) {
+        int oranges_item = stoi(oranges_temp[i]);
+
+        oranges[i] = oranges_item;
+    }
+
+    countApplesAndOranges(s, t, a, b, apples, oranges);
+
+    return 0;
+}
+
