@@ -10,9 +10,12 @@ public:
         {
             for (int j = 0; j < n; j++)
             {
-                if (i == j)
+                if (i == 1 || j==1 || i==n || j==n)
                 {
                     cout << "*";
+                }
+                else{
+                    cout<<" ";
                 }
             }
             cout << endl;
