@@ -4,28 +4,28 @@ using namespace std;
 class Pattern
 {
 public:
-    void hollow_square(int n)
+    void hollow_square(int n ,int m)
     {
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (i == 1 || j==1 || i==n || j==n)
-                {
-                    cout << "*";
-                }
-                else{
-                    cout<<" ";
-                }
-            }
-            cout << endl;
-        }
+        int i, j; 
+    for (i = 1; i <= n; i++) 
+    { 
+        for (j = 1; j <= m; j++) 
+        { 
+            if (i == 1 || i == n || 
+                j == 1 || j == m)         
+                cout << "*";             
+            else
+                cout << " ";
+        } 
+        cout << endl;
+    } 
     }
 };
 int main()
 {
     int x = 10;
+    int y=8;
     Pattern p;
-    p.hollow_square(x);
+    p.hollow_square(x,y);
     return 0;
 }
