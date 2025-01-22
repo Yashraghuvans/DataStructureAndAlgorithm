@@ -1,0 +1,12 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+
+int main() {
+    int numRows = 10; 
+    vector<vector<int>> pascalTriangle = generatePascalTriangle(numRows);
+    printPascalTriangle(pascalTriangle);
+    return 0;
+}
