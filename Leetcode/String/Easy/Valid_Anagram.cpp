@@ -19,11 +19,26 @@ public:
         }
         return true;
     }
-    bool isAnagram(string s,string t){
+    bool isAnagram1(string s,string t){
         sort(s.begin(),s.end());
         sort(t.begin(),t.end());
         if(s==t)return true;
         return false;
+    }
+    bool isAnagram2(string s,string t){
+        vector<int>cnt(26,0);
+        for(char &ch:s){
+            cnt[ch-'a']++;
+        }
+        for(char &ch:)t{
+            cnt[ch-'a']--;
+        }
+        for(int i=0;i<s.size();i++){
+            if(cnt[i]!=0){
+                return false;
+            }
+        }
+        return true;
     }
 };
 int main(){
